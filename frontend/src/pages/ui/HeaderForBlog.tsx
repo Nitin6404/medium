@@ -22,6 +22,9 @@ const HeaderForBlog = () => {
             className="bg-black border-none pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-700 w-full md:block md:w-64 lg:w-96"
             placeholder="Search..."
             type="search"
+            crossOrigin=""
+            onPointerEnterCapture={() => {}}
+            onPointerLeaveCapture={() => {}}
           />
           <MagnifyingGlassCircleIcon className="h-6 w-6 absolute top-2 left-2 text-gray-400" />
         </div>
