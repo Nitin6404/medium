@@ -11,12 +11,18 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",
+    "@material-tailwind/react": "^2.1.9",
     "@nitin6404/common-medium": "^1.0.0",
+    "@radix-ui/react-label": "^2.0.2",
     "@types/axios": "^0.14.0",
     "axios": "^1.6.8",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.0",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
