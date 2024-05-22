@@ -32,6 +32,34 @@ blogRoutes.use(async (c, next) => {
   await next();
 });
 
+blogRoutes.post('/:postId/like', async (c) => {
+  const prisma = new PrismaClient({
+    datasourceUrl: c.env.DATABASE_URL
+  }).$extends(withAccelerate());
+  const postId = c.req.param("postId");
+  const userId = c.get("userId");
+  const { success } = updateBlogInput.safeParse({ id: postId });
+  if( !success ){
+    c.status(411);
+    return c.json({
+      msg: "Update blog inputs are not correct"
+    });
+  }
+
+  await prisma.post.update({
+    where: {
+      id: body.id,
+    }, data: {
+      likes: {
+        increment: 1
+      }
+    }
+  })
+  console.log("Blog liked");
+  return c.text("LIKED BLOG");
+}
+);
+
 blogRoutes.post("/create", async  (c) => {
 	const userId = c.get('userId');
 	const prisma = new PrismaClient({
