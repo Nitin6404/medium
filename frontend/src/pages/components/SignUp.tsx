@@ -22,15 +22,17 @@ function SignUp() {
 
   return (
     <>
-      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      {error ? (
-        <div>Error: {error}</div> // Display error message if there's an error
-      ) : isLoggedIn ? (
-        <div>You are already logged in.</div> // Display message if user is logged in
-      ) : (
-        <SignUpCard />
-      )}
-      <Footer />
+      <div className='h-full w-full'>
+        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        {error ? (
+          <div>Error: {error}</div> // Display error message if there's an error
+        ) : isLoggedIn ? (
+          <div>You are already logged in.</div> // Display message if user is logged in
+        ) : (
+          <SignUpCard />
+        )}
+        <Footer />
+      </div>
     </>
   );
 }
