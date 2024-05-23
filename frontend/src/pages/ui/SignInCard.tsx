@@ -64,7 +64,9 @@ export function SignInCard() {
             <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-400">Sign In</button>
           )}
         </form>
-        <p className="text-gray-400 mt-4">Don't have an account? <a href="/signup" className="text-blue-400 hover:underline">Sign up</a></p>
+        <p className="text-gray-400 mt-4">Don't have an account? <a onClick={() => {
+          navigate("/signup");
+        }} className="text-blue-400 hover:underline hover:cursor-pointer">Sign up</a></p>
       </div>
     </div>
   );
